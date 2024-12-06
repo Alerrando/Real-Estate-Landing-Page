@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     challenge1();
     challenge2();
     challenge3();
+    challenge4();
 });
 
 function challenge1(){
@@ -25,5 +26,14 @@ function challenge3(){
 
     if(availabilityContent){
         availabilityContent.style.display = "none"
+    }
+}
+
+function challenge4(){
+    const lorem = document.querySelector(".footer-head p");
+
+    if(lorem){
+        lorem.style.fontWeight = "bold";
+        lorem.style.color = "#00f";
     }
 }
