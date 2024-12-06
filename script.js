@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     challenge3();
     challenge4();
     challenge5();
+    challenge6();
 });
 
 function challenge1(){
@@ -45,4 +46,13 @@ function challenge5(){
     const hero = document.querySelector(".hero");
 
     body.insertBefore(find, hero.nextSibling);
+}
+
+function challenge6(){
+    const button = document.querySelector(".find a");
+    button.setAttribute("id", "btn-contact");
+
+    button.addEventListener("click", () => {
+        alert("Você clico no botão contato");
+    })
 }
