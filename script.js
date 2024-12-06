@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     challenge1();
     challenge2();
+    challenge3();
 });
 
 function challenge1(){
@@ -16,5 +17,13 @@ function challenge2() {
 
     if (heroContent) {
         heroContent.style.backgroundImage = "url('./assets/images/Banner.png')";
+    }
+}
+
+function challenge3(){
+    const availabilityContent = document.querySelector(".availability-content");
+
+    if(availabilityContent){
+        availabilityContent.style.display = "none"
     }
 }
