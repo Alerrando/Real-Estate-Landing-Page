@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     challenge4();
     challenge5();
     challenge6();
+    challenge7();
 });
 
 function challenge1(){
@@ -55,4 +56,12 @@ function challenge6(){
     button.addEventListener("click", () => {
         alert("Você clico no botão contato");
     })
+}
+
+function challenge7(){
+    const select = document.querySelector("select[name='location']");
+    var opt = document.createElement('option');
+    opt.value = "presidente-prudente";
+    opt.innerHTML = "Presidente Prudente";
+    select.appendChild(opt);
 }
