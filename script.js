@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     challenge2();
     challenge3();
     challenge4();
+    challenge5();
 });
 
 function challenge1(){
@@ -36,4 +37,12 @@ function challenge4(){
         lorem.style.fontWeight = "bold";
         lorem.style.color = "#00f";
     }
+}
+
+function challenge5(){
+    const body = document.body;
+    const find = document.querySelector(".find");
+    const hero = document.querySelector(".hero");
+
+    body.insertBefore(find, hero.nextSibling);
 }
