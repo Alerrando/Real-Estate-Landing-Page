@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     challenge5();
     challenge6();
     challenge7();
+    challenge8();
 });
 
 function challenge1(){
@@ -64,4 +65,16 @@ function challenge7(){
     opt.value = "presidente-prudente";
     opt.innerHTML = "Presidente Prudente";
     select.appendChild(opt);
+}
+
+function challenge8(){
+    const navbar = document.querySelector(".navbar-list");
+    const login =  document.querySelector(".login");
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.setAttribute("href", "#");
+    a.innerText = "ABOUT US";
+
+    li.appendChild(a);
+    navbar.insertBefore(a, login.parentElement);
 }
