@@ -383,6 +383,58 @@ nav {
 .find-content img {
   width: 100%;
 }
+.testimonials {
+  margin: 4em 2em 0 2em;
+  padding: 0 0 2em 0;
+  text-align: center;
+  color: var(--purple-dark);
+  border-radius: 1.4em;
+  box-shadow: 0 0 10px var(--gray);
+  overflow: hidden;
+}
+.testimonials h2 {
+  font-size: 1.8em;
+  color: var(--purple);
+  margin-bottom: 1em;
+}
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 2em;
+}
+.testimonial {
+  background: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 1em;
+  padding: 0.8em 1.5em;
+  width: 20em;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.testimonial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--blue);
+}
+.testimonial h3 {
+  font-size: 1.2em;
+  color: var(--purple-dark);
+  margin-bottom: 0.8em;
+}
+.testimonial p {
+  font-size: 0.9em;
+  color: var(--purple-light);
+  margin: 0.5em 0;
+}
+.testimonial p:nth-of-type(2) {
+  color: var(--purple-dark);
+  font-weight: 600;
+}
+.testimonial p:nth-of-type(3) {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--blue);
+}
 footer {
   margin: 4em 0 1em;
   padding: 0 2em;
