@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     challenge6();
     challenge7();
     challenge8();
+    challenge9();
 });
 
 function challenge1(){
@@ -47,24 +48,32 @@ function challenge5(){
     const find = document.querySelector(".find");
     const hero = document.querySelector(".hero");
 
-    body.insertBefore(find, hero.nextSibling);
+    if(body && find && hero){
+        body.insertBefore(find, hero.nextSibling);
+    }
 }
 
 function challenge6(){
     const button = document.querySelector(".find a");
-    button.setAttribute("id", "btn-contact");
 
-    button.addEventListener("click", () => {
-        alert("Você clico no botão contato");
-    })
+    if(button){
+        button.setAttribute("id", "btn-contact");
+    
+        button.addEventListener("click", () => {
+            alert("Você clico no botão contato");
+        });
+    }
 }
 
 function challenge7(){
     const select = document.querySelector("select[name='location']");
-    var opt = document.createElement('option');
-    opt.value = "presidente-prudente";
-    opt.innerHTML = "Presidente Prudente";
-    select.appendChild(opt);
+
+    if(select){
+        var opt = document.createElement('option');
+        opt.value = "presidente-prudente";
+        opt.innerHTML = "Presidente Prudente";
+        select.appendChild(opt);
+    }
 }
 
 function challenge8(){
@@ -72,9 +81,26 @@ function challenge8(){
     const login =  document.querySelector(".login");
     const li = document.createElement("li");
     const a = document.createElement("a");
-    a.setAttribute("href", "#");
-    a.innerText = "ABOUT US";
 
-    li.appendChild(a);
-    navbar.insertBefore(a, login.parentElement);
+    if(navbar && login){
+        a.setAttribute("href", "#");
+        a.innerText = "ABOUT US";
+    
+        li.appendChild(a);
+        navbar.insertBefore(li, login.parentElement);
+    }
+}
+
+function challenge9(){
+    const form = document.querySelector(".footer-subscribe");
+    console.log(form);
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.querySelector("form input");
+        
+        if(email.value.trim().length === 0){
+            alert("O campo email está vazio");
+        }
+    })
 }
